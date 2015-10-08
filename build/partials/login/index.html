@@ -1,0 +1,34 @@
+<div id="login"
+     class="login"
+     style="margin-top: 100px;">
+    <div class="col-md-4 col-md-offset-4">
+        <h1 style="margin-bottom: 40px;">Login</h1>
+
+        <div class="alert alert-danger"
+             data-ng-if="loginController.loginFailed">
+            Could not login.
+        </div>
+
+        <form name="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email"
+                       name="email"
+                       class="form-control"
+                       data-ng-model="loginController.creds.email"
+                       id="email"/>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password"
+                       name="password"
+                       class="form-control"
+                       data-ng-model="loginController.creds.password"
+                       id="password"/>
+            </div>
+            <button data-ng-click="loginController.login(loginController.creds)"
+                    class="btn btn-block btn-primary btn-lg">Login
+            </button>
+        </form>
+    </div>
+</div>
