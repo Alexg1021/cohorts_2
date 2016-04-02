@@ -15,6 +15,7 @@
              */
 
             vm.find = function find(projectId){
+              debugger;
                 return _.find(vm.projects, {_id: projectId});
             };
 
@@ -42,19 +43,21 @@
                         $state.go('projects', {projectId: project._id});
                 }, function(err){
                 });
-
             };
 
-
-
             vm.put = function put(projectCopy){
+              debugger;
 
                 var data = {
                         title: projectCopy.title,
                         user: projectCopy.user._id
                 };
+
+
                 return $http.put('/projects/' + projectCopy._id, data)
                     .then(function(res){
+
+                      debugger;
 
                         var p = vm.find(projectCopy._id);
                         _.merge(p, projectCopy);

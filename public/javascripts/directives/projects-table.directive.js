@@ -11,7 +11,6 @@
 
             //CREATE THE DDO (Directive Definition Object)
             return{
-
                 restrict: 'E',
                 templateUrl: 'partials/directives/project-table.html',
                 scope: {

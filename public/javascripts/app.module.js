@@ -147,6 +147,7 @@
             /**
              * Define our states.
              */
+
             $stateProvider
                 .state('login', {
                     url: '/login',

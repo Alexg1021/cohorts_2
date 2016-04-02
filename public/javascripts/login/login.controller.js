@@ -25,9 +25,7 @@
                         $state.go('projects');
                     },
                 function(err){
-
                     vm.loginFailed = true;
-
                 });
             };
         });

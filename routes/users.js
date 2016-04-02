@@ -68,12 +68,14 @@ router.get('/', jwt.protect,  function (req, res) {
         res.json(users);
     });
 });
+
 router.post('/', jwt.protect, function (req, res) {
     var user = new User(req.body);
     user.save(function (err) {
         res.json(user);
     });
 });
+
 router.put('/:userId', jwt.protect, function (req, res) {
     req.user.update({$set: req.body}, {new: true}, function (err, user) {
         res.sendStatus(200);
